@@ -84,6 +84,11 @@ bool DFA::removeAccept(int st)
 	return true;
 }
 
+DFA::status_set DFA::getAccept() const
+{
+	return _accept;
+}
+
 void DFA::addTrans(int i, char c, int f)
 {
 	_status.insert(i);
@@ -186,4 +191,9 @@ void DFA::addCharSet(const string& str)
 void DFA::addCharSet(char c)
 {
 	_char.insert(c);
+}
+
+DFA::status_set DFA::getStatusSet() const
+{
+	return _status;
 }

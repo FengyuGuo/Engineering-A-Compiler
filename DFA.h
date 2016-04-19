@@ -8,6 +8,7 @@ using namespace std;
 class DFA
 {
 public:
+	typedef int status_type;
 	typedef unordered_map<char, int> trans_type;
 	typedef unordered_map<int, trans_type> map_type;
 	typedef set<int> status_set;
@@ -24,6 +25,7 @@ public:
 
 	bool addAccept(int st);
 	bool removeAccept(int st);
+	status_set getAccept() const;
 
 	void addTrans(int i, char c, int f);
 	int getTrans(int i, char c) const;
@@ -38,6 +40,8 @@ public:
 	string getCharSet()const;
 	void addCharSet(const string& str);
 	void addCharSet(char c);
+
+	status_set getStatusSet() const;
 private:
 	int _start;
 	status_set _accept;
