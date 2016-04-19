@@ -5,22 +5,10 @@ using std::string;
 /*!
  * \class Regex
  *
- * \ingroup GroupName
- *
- * \brief 正则表达式，尚未完成！
- *
- * TODO: 完成正则表达式的编译功能！
- *
- * \note 
+ * \brief 尚未完成编译功能！
  *
  * \author fengyu.guo
- *
- * \version 1.0
- *
  * \date 四月 2016
- *
- * Contact: user@company.com
- *
  */
 class Regex
 {

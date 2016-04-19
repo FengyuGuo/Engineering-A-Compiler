@@ -11,6 +11,7 @@
 #include "NFA.h"
 #include "DFA.h"
 #include "NFAtoDFA.h"
+#include "MinimizeDFA.h"
 using namespace std;
 
 void print_set(ostream& os, NFA::set_type set)
@@ -50,6 +51,10 @@ void debugDFA(void)
 	DFA dfa(in);
 	dfa.print(cout);
 	cout << "****************" << endl;
+	MinimizeDFA md;
+	DFA nDfa = md.minimize(dfa);
+	nDfa.print(cout);
+	cout << "****************" << endl;
 	string testString;
 	while (getline(cin, testString))
 	{
@@ -67,7 +72,7 @@ void bitSetTest(void)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	debugNFA();
+	debugDFA();
 	system("pause");
 	return 0;
 }
