@@ -110,7 +110,7 @@ bool MinimizeDFA::_setSetToDFA(const set_set_type& st, DFA& out)
 	int newFinal = 0;
 	DFA::status_type start, final;
 	_inToNDFAMap.clear();
-	int i = 0;
+	int i = 1;
 	for (auto &statusSet:st)
 	{
 		_inToNDFAMap[*(statusSet.begin())] = i++;
