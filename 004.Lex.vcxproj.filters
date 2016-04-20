@@ -24,9 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Regex.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="NFA.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -45,9 +42,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="004.Lex.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Regex.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="NFA.cpp">
