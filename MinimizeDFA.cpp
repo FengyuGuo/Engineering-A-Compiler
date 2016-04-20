@@ -42,6 +42,24 @@ DFA MinimizeDFA::minimize(const DFA& dfa)
 	return ret;
 }
 
+void MinimizeDFA::printConversion(ostream& os)
+{
+	if (_nDFASet.empty())
+	{
+		os << "Empty conversion!" << endl;
+	}
+	for (auto &st:_nDFASet)
+	{
+		os << "{ ";
+		for (auto &status:st)
+		{
+			os << status << " ";
+		}
+		os << "} -> ";
+		os << _inToNDFAMap.at(*(st.begin())) << endl;
+	}
+}
+
 bool MinimizeDFA::_splitSet(const DFA::status_set& in, DFA::status_set& out1, DFA::status_set& out2)
 {
 	if (in.size()<=1)

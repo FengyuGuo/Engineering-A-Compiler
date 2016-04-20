@@ -53,6 +53,8 @@ void debugDFA(void)
 	cout << "****************" << endl;
 	MinimizeDFA md;
 	DFA nDfa = md.minimize(dfa);
+	md.printConversion(cout);
+	cout << "****************" << endl;
 	nDfa.print(cout);
 	cout << "****************" << endl;
 	string testString;
