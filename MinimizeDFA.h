@@ -3,6 +3,7 @@
 #include <set>
 #include <string>
 #include <map>
+#include <iostream>
 using namespace std;
 class MinimizeDFA
 {
@@ -15,6 +16,8 @@ public:
 	~MinimizeDFA();
 
 	DFA minimize(const DFA& dfa);
+
+	void printConversion(ostream& os);
 private:
 	DFA _dfa;
 	string _cSet;
